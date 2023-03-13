@@ -14,13 +14,13 @@ function App() {
   }
 
   const handleImageToText = () => {
-    setIsLoading(true); // set loading state to true
+    setIsLoading(true); 
     Tesseract.recognize(image, "eng").then((res) => {
       setText(res.data.text);
-      setIsLoading(false); // set loading state to false
+      setIsLoading(false); 
     }).catch((err) => {
       console.log(err);
-      setIsLoading(false); // set loading state to false
+      setIsLoading(false); 
     });
   }
 
